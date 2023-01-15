@@ -8,8 +8,8 @@ function MyPosts() {
             <textarea></textarea>
             <button>Add post</button>
             <div className={s.item}>
-                <Post message='Hi, how are you?' />
-                <Post message='It`s my first post' />
+                <Post message='Hi, how are you?' likesCount='0'/>
+                <Post message='It`s my first post' likesCount='6'/>
             </div>
 
         </div>
