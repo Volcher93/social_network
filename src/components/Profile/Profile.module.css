@@ -1,0 +1,13 @@
+.content {
+    grid-area: c;
+    background-color: cadetblue;
+}
+
+.upperWrapper img{
+    width: 100%;
+    height: 50%;
+}
+
+.avaImg img{
+    height: 150px;
+}
