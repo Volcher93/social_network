@@ -3,6 +3,7 @@ import p from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
 
 function Navbar() {
+
     return (
         <nav className={p.nav}>
             <div className={p.item}>
@@ -20,7 +21,11 @@ function Navbar() {
             <div className={p.item}>
                 <NavLink to="/settings" activeClassName={p.activeLink}>Settings</NavLink>
             </div>
-        </nav>)
+            <div className={p.sidebar}>
+                bestFriend
+            </div>
+        </nav>
+    )
 }
 
 export default Navbar;

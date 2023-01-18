@@ -8,6 +8,19 @@
     color: darkorange;
     text-decoration: none;
 }
+
 .item a.activeLink {
     color: whitesmoke;
+}
+
+.sidebar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 20px;
+    color: gold;
+}
+
+.sidebar img {
+    width: 40px;
+    height: 40px;
 }
