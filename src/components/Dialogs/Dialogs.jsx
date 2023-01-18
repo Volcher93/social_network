@@ -19,25 +19,31 @@ function Message(props) {
 }
 
 function Dialogs() {
+
+    let dialogs = [
+        {id: 1, name: 'Ben'},
+        {id: 2, name: 'Nuke'},
+        {id: 3, name: 'Adgarh'},
+        {id: 4, name: 'Niko'},
+        {id: 5, name: 'Greenleaf'},
+        {id: 6, name: 'Frost'}
+    ];
+    let messages = [
+        {id: 1, message: 'Hello'},
+        {id: 2, message: 'When will we go hiking?'},
+        {id: 3, message: 'We will go to Naroch?'}
+    ];
+
+    let dialogsElements = dialogs.map(d => <DialogItem name={d.name} id={d.id}/>);
+    let messagesElements = messages.map(m => <Message message={m.message}/>);
+
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
-                <DialogItem name='Ben' id='1'/>
-                {/*<div className={s.dialog + ' ' + s.active}>*/}
-                {/*    <NavLink to="/dialogs/1">Ben</NavLink>*/}
-                {/*</div>*/}
-                <DialogItem name='Nuke' id='2'/>
-                <DialogItem name='Adgarh' id='3'/>
-                <DialogItem name='Niko' id='4'/>
-                <DialogItem name='Greenleaf' id='5'/>
-                <DialogItem name='Frost' id='6'/>
-
+                {dialogsElements}
             </div>
             <div className={s.messages}>
-                <Message message="Hello"/>
-                <Message message="When will we go hiking?"/>
-                <Message message="We will go to Naroch"/>
-
+                {messagesElements}
             </div>
         </div>
     )
