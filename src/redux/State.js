@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from "../render";
+
 let state = {
     profilePage: {
         posts: [
@@ -27,7 +29,14 @@ let state = {
             {name: 'Niko', src: "https://i1.sndcdn.com/avatars-000654084507-0m4lhd-t500x500.jpg"}
         ]
     }
-
 }
-
+export let addPost = (postMessage) => {
+    let newPost = {
+        id: 3,
+        message: postMessage,
+        likesCount: 0
+    };
+    state.profilePage.posts.push(newPost);
+    rerenderEntireTree(state);
+}
 export default state
