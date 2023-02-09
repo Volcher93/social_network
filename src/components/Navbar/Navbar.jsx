@@ -19,11 +19,14 @@ function Navbar() {
                 <NavLink to="/music" activeClassName={p.activeLink}> Music</NavLink>
             </div>
             <div className={p.item}>
+                <NavLink to="/users" activeClassName={p.activeLink}> Users</NavLink>
+            </div>
+            <div className={p.item}>
                 <NavLink to="/settings" activeClassName={p.activeLink}>Settings</NavLink>
             </div>
-            <div className={p.sidebar}>
-                bestFriend
-            </div>
+            {/*<div className={p.sidebar}>*/}
+            {/*    bestFriend*/}
+            {/*</div>*/}
         </nav>
     )
 }
