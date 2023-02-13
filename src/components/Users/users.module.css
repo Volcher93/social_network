@@ -1,4 +1,21 @@
-.userPhoto{
+.userPhoto {
     width: 100px;
     height: 100px;
+    grid-area: img;
+}
+
+.button {
+    grid-area: click;
+}
+.userInfo {
+    grid-area: name;
+}
+.userLocation {
+    grid-area: location;
+}
+.user {
+    display: grid;
+    grid-template-areas:
+    "img name location";
+    padding-bottom: 50px;
 }

@@ -34,26 +34,28 @@ let Users = (props) => {
     console.log(props.users.length);
     return <div>{
         props.users.map(u => <div key={u.id}>
+            <div className={styles.user}>
         <span>
             <div>
                 <img src={u.photoURL} className={styles.userPhoto}/>
             </div>
-            <div>
+            <div className={styles.button}>
                {u.followed
                    ? <button onClick={() => {props.unfollow (u.id) } }>Unfollow</button>
                    : <button onClick={() => {props.follow (u.id) } }>Follow</button>}
             </div>
         </span>
             <span>
-            <span>
+            <span className={styles.userInfo}>
                 <div>{u.fullName}</div>
                 <div>{u.status}</div>
             </span>
-            <span>
+            <span className={styles.userLocation}>
                 <div>{u.location.country}</div>
                 <div>{u.location.city}</div>
             </span>
         </span>
+        </div>
         </div>)
     }
     </div>
