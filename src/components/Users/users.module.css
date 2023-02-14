@@ -1,21 +1,60 @@
 .userPhoto {
     width: 100px;
     height: 100px;
+    border-radius: 50px;
     grid-area: img;
 }
 
-.button {
-    grid-area: click;
+.butt {
+    grid-area: b1;
+    margin-left: 20px;
 }
-.userInfo {
+
+.userName {
     grid-area: name;
+    margin-left: 10px;
 }
-.userLocation {
-    grid-area: location;
+
+.userStatus {
+    grid-area: status;
+    margin-left: 10px;
 }
+
+.userCountry {
+    grid-area: country;
+    text-align: right;
+}
+
+.userCity {
+    grid-area: city;
+    text-align: right;
+}
+
+.userInfo {
+    grid-area: info;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 80px;
+    grid-template-areas: "name country" "status city";
+    border-style: solid;
+    border-color: aliceblue;
+    border-radius: 10px;
+}
+
 .user {
     display: grid;
-    grid-template-areas:
-    "img name location";
-    padding-bottom: 50px;
+    grid-template-columns: 120px 410px;
+    grid-template-rows: 100px;
+    grid-template-areas: "img info" "b1 info";
+    padding-bottom: 20px;
 }
+
+/*.user {*/
+/*    display: grid;*/
+/*    grid-template-columns: 120px 500px;*/
+/*    grid-template-rows: 100px;*/
+/*    grid-template-areas:*/
+/*    "img name country"*/
+/*    "b1 status city";*/
+/*    padding-bottom: 20px;*/
+/*}*/
